@@ -29,71 +29,50 @@
       margin: 0 auto;
       padding: 40px 20px;
     }
-    header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 8px;
-    }
-    .tagline {
-      font-size: 1.2rem;
-      color: var(--gray);
-      margin-bottom: 20px;
-    }
-    section {
-      margin-bottom: 50px;
-    }
+    header { text-align:center; margin-bottom:60px; }
+    h1 { font-size:2.5rem; margin-bottom:8px; }
+    .tagline { font-size:1.2rem; color:var(--gray); margin-bottom:20px; }
+    section { margin-bottom:50px; }
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 8px;
-      display: inline-block;
+      font-size:1.6rem;
+      margin-bottom:20px;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:8px;
+      display:inline-block;
     }
-    ul {
-      list-style: none;
+    ul { list-style:none; }
+    li { margin-bottom:12px; font-size:1.1rem; }
+    .skills li::before { content:"• "; color:var(--accent); font-weight:bold; }
+    .experience li { margin-bottom:20px; }
+    .role { font-weight:600; }
+    .company { color:var(--gray); font-size:0.95rem; }
+    .cert-grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:30px;
     }
-    li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
+    .cert-item { text-align:center; }
+    .cert-item img {
+      max-width:100%;
+      height:auto;
+      border:1px solid #ddd;
+      border-radius:8px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
     }
-    .skills li::before {
-      content: "• ";
-      color: var(--accent);
-      font-weight: bold;
-    }
-    .experience li {
-      margin-bottom: 20px;
-    }
-    .role {
-      font-weight: 600;
-    }
-    .company {
-      color: var(--gray);
-      font-size: 0.95rem;
-    }
-    .contact {
-      text-align: center;
-      margin-top: 60px;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    .cert-title { margin-top:12px; font-weight:600; }
+    .contact { text-align:center; margin-top:60px; }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
     footer {
-      text-align: center;
-      margin-top: 80px;
-      color: var(--gray);
-      font-size: 0.9rem;
+      text-align:center;
+      margin-top:80px;
+      color:var(--gray);
+      font-size:0.9rem;
     }
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      body { padding: 30px 15px; }
+    @media (min-width:600px) { .cert-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:600px) {
+      h1 { font-size:2rem; }
+      body { padding:30px 15px; }
     }
   </style>
 </head>
@@ -122,40 +101,41 @@
     </ul>
   </section>
 
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <img src="gorgias-cert.png" alt="Gorgias Certified Support Agent">
+        <p class="cert-title">Gorgias Certified Support Agent</p>
+        <p>Issued Oct 2026 – Valid until Oct 2027</p>
+      </div>
+      <div class="cert-item">
+        <img src="xero-cert.png" alt="Xero Certified Associate Level 1">
+        <p class="cert-title">Xero Certified Associate Level 1</p>
+        <p>Issued Sep 2026 – Valid until Sep 2027</p>
+      </div>
+    </div>
+  </section>
+
   <section id="experience">
     <h2>Experience</h2>
     <ul class="experience">
-      <li>
-        <span class="role">ICT Focal</span> – DENR Lagangilang CENRO (Current)<br>
-        <span class="company">Tech coordination, admin tasks, independent support</span>
-      </li>
-      <li>
-        <span class="role">Data Analyst (2 years)</span> – BPO/Healthcare<br>
-        <span class="company">Workflows, metrics tracking, data accuracy, error resolution</span>
-      </li>
-      <li>
-        <span class="role">Customer Service Representative</span> – Alorica & Sagility (Healthcare: Aetna, Anthem, BCBS)<br>
-        <span class="company">Claims Processing/Benefits and Eligibility Checking, Authorization processor, 100% compliance, AHT Champion</span>
-      </li>
-      <li>
-        <span class="role">Registration Kit Operator</span> – Philippine Statistics Authority
-      </li>
+      <li><span class="role">ICT Focal</span> – DENR Lagangilang CENRO (Current)<br><span class="company">Tech coordination, admin tasks, independent support</span></li>
+      <li><span class="role">Data Analyst (2 years)</span> – BPO/Healthcare<br><span class="company">Workflows, metrics tracking, data accuracy, error resolution</span></li>
+      <li><span class="role">Customer Service Representative</span> – Alorica & Sagility (Aetna, Anthem, BCBS)<br><span class="company">Claims / Benefits / Eligibility / Authorizations, 100% compliance, AHT Champion</span></li>
+      <li><span class="role">Registration Kit Operator</span> – Philippine Statistics Authority</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: Raniagxd@gmail.com <br>
-       Phone: 09764210791 <br>
-       Location: Manila, Philippines<br>
-       Available: Flexible (including US ET night shifts)</p>
-    <p><a href="[https://bit.ly/49yk6tT]">Resume (PDF)</a></p>
+    <p>Email: Raniagxd@gmail.com<br>Phone: 09764210791<br>Location: Manila, Philippines<br>Available: Flexible (US ET night shifts ok)</p>
+    <p><a href="https://bit.ly/49yk6tT">Resume (PDF)</a></p>
   </section>
 
   <footer>
-    &copy; 2026 Raniag Ubas. Built for remote opportunities.
+    © 2026 Raniag Ubas. Built for remote opportunities.
   </footer>
 
 </body>
-
 </html>
