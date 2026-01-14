@@ -6,23 +6,24 @@
   <title>Raniag Ubas | Virtual Assistant & Tech Professional</title>
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --accent: #0066cc;
-      --gray: #555555;
+      --bg: #f8fafc;                /* light cool gray - fresh minimalist base */
+      --text: #0f172a;              /* deep charcoal - professional contrast */
+      --accent: #64748b;            /* muted slate - subtle, rad tech accent */
+      --gray: #64748b;
       --card-bg: #ffffff;
-      --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      --card-border: #e5e7eb;
+      --card-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      --card-border: #e2e8f0;
+      --hover-scale: scale(1.02);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0f0f0f;
-        --text: #eeeeee;
-        --accent: #4da6ff;
-        --gray: #aaaaaa;
-        --card-bg: #161b22;
-        --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
-        --card-border: #30363d;
+        --bg: #0f172a;              /* deep navy-black - modern dark base */
+        --text: #e2e8f0;            /* soft light gray - easy on eyes */
+        --accent: #94a3b8;          /* lighter slate - subtle pop in dark */
+        --gray: #94a3b8;
+        --card-bg: #1e293b;
+        --card-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        --card-border: #334155;
       }
     }
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -34,6 +35,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 40px 20px;
+      transition: background 0.3s ease;
     }
     header {
       text-align: center;
@@ -42,6 +44,7 @@
     h1 {
       font-size: 2.5rem;
       margin-bottom: 8px;
+      color: var(--text);
     }
     .tagline {
       font-size: 1.2rem;
@@ -55,6 +58,11 @@
       border-radius: 12px;
       box-shadow: var(--card-shadow);
       border: 1px solid var(--card-border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    section:hover {
+      transform: var(--hover-scale);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     }
     h2 {
       font-size: 1.6rem;
@@ -62,6 +70,7 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 8px;
       display: inline-block;
+      color: var(--text);
     }
     ul { list-style: none; }
     li { margin-bottom: 12px; font-size: 1.1rem; }
@@ -78,14 +87,23 @@
     .cert-item img {
       max-width: 100%;
       height: auto;
-      border: 1px solid #ddd;
+      border: 1px solid var(--card-border);
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
+    .cert-item img:hover { transform: var(--hover-scale); }
     .cert-title { margin-top: 12px; font-weight: 600; }
     .contact { text-align: center; margin-top: 60px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #475569;               /* slightly darker slate on hover for depth */
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       margin-top: 80px;
@@ -139,8 +157,8 @@
         <img src="xero-cert.png" alt="Xero Certified Associate Level 1">
         <p class="cert-title">Xero Certified Associate Level 1</p>
         <p>Issued Sep 2026 – Valid until Sep 2027</p>
-        <div class="cert-item">
-        <img src="quickbooks-cert.png" alt="Xero Certified Associate Level 1">
+      <div class="cert-item">
+        <img src="quickbooks-cert.png" alt="Xero Certified Associate">
         <p class="cert-title">Quickbooks Certified Associate</p>
         <p>Issued Sep 2026 – Valid until Sep 2027</p>
       </div>
@@ -169,4 +187,3 @@
 
 </body>
 </html>
-
