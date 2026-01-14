@@ -10,11 +10,11 @@
       --text: #0f172a;
       --accent: #64748b;
       --gray: #64748b;
-      --card-bg: rgba(255, 255, 255, 0.92);      /* semi-transparent white for overlay effect */
+      --card-bg: rgba(255, 255, 255, 0.92);
       --card-shadow: 0 6px 20px rgba(0,0,0,0.08);
       --card-border: #e2e8f0;
       --hover-scale: scale(1.02);
-      --overlay-bg: rgba(248, 250, 252, 0.85);   /* light overlay for readability */
+      --overlay-bg: rgba(248, 250, 252, 0.85);
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -22,10 +22,10 @@
         --text: #e2e8f0;
         --accent: #94a3b8;
         --gray: #94a3b8;
-        --card-bg: rgba(30, 41, 59, 0.92);        /* semi-transparent dark */
+        --card-bg: rgba(30, 41, 59, 0.92);
         --card-shadow: 0 6px 20px rgba(0,0,0,0.6);
         --card-border: #334155;
-        --overlay-bg: rgba(15, 23, 42, 0.85);     /* dark overlay */
+        --overlay-bg: rgba(15, 23, 42, 0.85);
       }
     }
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -41,87 +41,74 @@
       min-height: 100vh;
       transition: background 0.3s ease;
     }
-    header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-    .tagline {
-      font-size: 1.2rem;
-      color: var(--gray);
-      margin-bottom: 20px;
-    }
+    header { text-align:center; margin-bottom:60px; }
+    h1 { font-size:2.5rem; margin-bottom:8px; color:var(--text); }
+    .tagline { font-size:1.2rem; color:var(--gray); margin-bottom:20px; }
     section {
-      background: var(--card-bg);
-      padding: 2rem;
-      margin-bottom: 2.5rem;
-      border-radius: 12px;
-      box-shadow: var(--card-shadow);
-      border: 1px solid var(--card-border);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      backdrop-filter: blur(4px); /* subtle blur for glass effect if browser supports */
+      background:var(--card-bg);
+      padding:2rem;
+      margin-bottom:2.5rem;
+      border-radius:12px;
+      box-shadow:var(--card-shadow);
+      border:1px solid var(--card-border);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+      backdrop-filter:blur(4px);
     }
-    section:hover {
-      transform: var(--hover-scale);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    }
+    section:hover { transform:var(--hover-scale); box-shadow:0 10px 30px rgba(0,0,0,0.12); }
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 8px;
-      display: inline-block;
-      color: var(--text);
+      font-size:1.6rem;
+      margin-bottom:20px;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:8px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--text);
     }
-    ul { list-style: none; }
-    li { margin-bottom: 12px; font-size: 1.1rem; }
-    .skills li::before { content: "• "; color: var(--accent); font-weight: bold; }
-    .experience li { margin-bottom: 20px; }
-    .role { font-weight: 600; }
-    .company { color: var(--gray); font-size: 0.95rem; }
+    .section-icon { font-size:1.4rem; opacity:0.8; }
+    ul { list-style:none; }
+    li { margin-bottom:12px; font-size:1.1rem; }
+    .skills li::before { content:"• "; color:var(--accent); font-weight:bold; }
+    .experience li { margin-bottom:20px; }
+    .role { font-weight:600; }
+    .company { color:var(--gray); font-size:0.95rem; }
     .cert-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:30px;
     }
-    .cert-item { text-align: center; }
+    .cert-item { text-align:center; }
     .cert-item img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid var(--card-border);
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      max-width:100%;
+      height:auto;
+      border:1px solid var(--card-border);
+      border-radius:8px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      transition:transform 0.2s ease;
     }
-    .cert-item img:hover { transform: var(--hover-scale); }
-    .cert-title { margin-top: 12px; font-weight: 600; }
-    .contact { text-align: center; margin-top: 60px; }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s ease;
+    .cert-item img:hover { transform:var(--hover-scale); }
+    .cert-title { margin-top:12px; font-weight:600; }
+    .cert-button {
+      display:inline-block;
+      margin-top:1.5rem;
+      padding:0.75rem 1.5rem;
+      background:var(--accent);
+      color:#fff;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:500;
+      transition:background 0.2s ease;
     }
-    a:hover {
-      color: #475569;
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      margin-top: 80px;
-      color: var(--gray);
-      font-size: 0.9rem;
-    }
-    @media (min-width: 600px) {
-      .cert-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      body { padding: 30px 15px; }
-      section { padding: 1.5rem; }
+    .cert-button:hover { background:#475569; }
+    .contact { text-align:center; margin-top:60px; }
+    a { color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
+    a:hover { color:#475569; text-decoration:underline; }
+    footer { text-align:center; margin-top:80px; color:var(--gray); font-size:0.9rem; }
+    @media (min-width:600px) { .cert-grid { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); } }
+    @media (max-width:600px) {
+      h1 { font-size:2rem; }
+      body { padding:30px 15px; }
+      section { padding:1.5rem; }
     }
   </style>
 </head>
@@ -133,12 +120,12 @@
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
+    <h2><span class="section-icon">👤</span> About Me</h2>
     <p>Detail-oriented professional with a Computer Science degree (2019) and 4+ years in customer service/BPO (healthcare accounts: Aetna, Anthem, BCBS), 2 years as Data Analyst, and current ICT Focal role at DENR Lagangilang CENRO. Expert in process optimization, 100% compliance, and tools like GHL, Zapier, QuickBooks, Xero. Seeking remote VA opportunities to support businesses with reliability and efficiency.</p>
   </section>
 
   <section id="skills">
-    <h2>Key Skills & Tools</h2>
+    <h2><span class="section-icon">🛠️</span> Key Skills & Tools</h2>
     <ul class="skills">
       <li>GoHighLevel (GHL) – Expert (CRM, automations, email sequences, client management)</li>
       <li>Zapier – Workflow automation & integrations</li>
@@ -151,7 +138,7 @@
   </section>
 
   <section id="certifications">
-    <h2>Certifications</h2>
+    <h2><span class="section-icon">🏆</span> Certifications</h2>
     <div class="cert-grid">
       <div class="cert-item">
         <img src="gorgias-cert.png" alt="Gorgias Certified Support Agent">
@@ -169,10 +156,11 @@
         <p>[Issued January 2026]</p>
       </div>
     </div>
+    <a href="certificates.html" class="cert-button">View Full Certificates</a>
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
+    <h2><span class="section-icon">💼</span> Experience</h2>
     <ul class="experience">
       <li><span class="role">ICT Focal</span> – DENR Lagangilang CENRO <br><span class="company">Tech coordination, admin tasks, independent support</span></li>
       <li><span class="role">Data Analyst (2 years)</span> – BPO/Healthcare<br><span class="company">Workflows, metrics tracking, data accuracy, error resolution</span></li>
@@ -182,7 +170,7 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2><span class="section-icon">📞</span> Contact</h2>
     <p>Email: Raniagxd@gmail.com<br>Phone: 09764210791<br>Location: Manila, Philippines<br>Available: Flexible (US ET night shifts ok)</p>
     <p><a href="https://bit.ly/49yk6tT">Resume (PDF)</a></p>
   </section>
@@ -193,5 +181,3 @@
 
 </body>
 </html>
-
-
