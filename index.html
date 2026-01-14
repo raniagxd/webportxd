@@ -10,6 +10,9 @@
       --text: #111111;
       --accent: #0066cc;
       --gray: #555555;
+      --card-bg: #ffffff;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --card-border: #e5e7eb;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -17,6 +20,9 @@
         --text: #eeeeee;
         --accent: #4da6ff;
         --gray: #aaaaaa;
+        --card-bg: #161b22;
+        --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        --card-border: #30363d;
       }
     }
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -29,50 +35,70 @@
       margin: 0 auto;
       padding: 40px 20px;
     }
-    header { text-align:center; margin-bottom:60px; }
-    h1 { font-size:2.5rem; margin-bottom:8px; }
-    .tagline { font-size:1.2rem; color:var(--gray); margin-bottom:20px; }
-    section { margin-bottom:50px; }
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    section {
+      background: var(--card-bg);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--card-border);
+    }
     h2 {
-      font-size:1.6rem;
-      margin-bottom:20px;
-      border-bottom:2px solid var(--accent);
-      padding-bottom:8px;
-      display:inline-block;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      display: inline-block;
     }
-    ul { list-style:none; }
-    li { margin-bottom:12px; font-size:1.1rem; }
-    .skills li::before { content:"• "; color:var(--accent); font-weight:bold; }
-    .experience li { margin-bottom:20px; }
-    .role { font-weight:600; }
-    .company { color:var(--gray); font-size:0.95rem; }
+    ul { list-style: none; }
+    li { margin-bottom: 12px; font-size: 1.1rem; }
+    .skills li::before { content: "• "; color: var(--accent); font-weight: bold; }
+    .experience li { margin-bottom: 20px; }
+    .role { font-weight: 600; }
+    .company { color: var(--gray); font-size: 0.95rem; }
     .cert-grid {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
     }
-    .cert-item { text-align:center; }
+    .cert-item { text-align: center; }
     .cert-item img {
-      max-width:100%;
-      height:auto;
-      border:1px solid #ddd;
-      border-radius:8px;
-      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .cert-title { margin-top:12px; font-weight:600; }
-    .contact { text-align:center; margin-top:60px; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
+    .cert-title { margin-top: 12px; font-weight: 600; }
+    .contact { text-align: center; margin-top: 60px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer {
-      text-align:center;
-      margin-top:80px;
-      color:var(--gray);
-      font-size:0.9rem;
+      text-align: center;
+      margin-top: 80px;
+      color: var(--gray);
+      font-size: 0.9rem;
     }
-    @media (min-width:600px) { .cert-grid { grid-template-columns:repeat(2,1fr); } }
-    @media (max-width:600px) {
-      h1 { font-size:2rem; }
-      body { padding:30px 15px; }
+    @media (min-width: 600px) {
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      body { padding: 30px 15px; }
+      section { padding: 1.5rem; }
     }
   </style>
 </head>
