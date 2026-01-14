@@ -31,22 +31,62 @@
       padding: 40px 20px;
       min-height: 100vh;
     }
-    header { text-align:center; margin-bottom:40px; }
-    h1 { font-size:2.2rem; color:var(--text); }
-    .back { display:inline-block; margin:1rem 0; color:var(--accent); text-decoration:none; font-weight:500; }
-    .back:hover { text-decoration:underline; }
-    .cert-list { max-width:900px; margin:0 auto; }
-    .cert-full {
-      margin-bottom:3rem;
-      text-align:center;
-      background:var(--card-bg);
-      padding:1.5rem;
-      border-radius:12px;
-      box-shadow:var(--card-shadow);
-      border:1px solid var(--card-border);
+    header {
+      text-align: center;
+      margin-bottom: 40px;
     }
-    .cert-full img { max-width:100%; height:auto; border-radius:8px; }
-    .cert-info { margin-top:1rem; font-size:1.1rem; }
+    h1 {
+      font-size: 2.2rem;
+      color: var(--text);
+    }
+    .back {
+      display: inline-block;
+      margin: 1rem 0;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back:hover {
+      text-decoration: underline;
+    }
+    .cert-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2x2 grid base */
+      gap: 2rem;
+    }
+    .cert-full {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--card-border);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cert-full:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .cert-full img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .cert-info {
+      font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+      .cert-list {
+        grid-template-columns: 1fr; /* stack to single column on smaller screens */
+      }
+    }
+    @media (max-width: 600px) {
+      body { padding: 30px 15px; }
+      h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
@@ -77,25 +117,11 @@
       <img src="quickbooks-cert.png" alt="QuickBooks Certified">
       <div class="cert-info">
         QuickBooks Certified<br>
-        Issued January 2026
+        [Issued January 2026]
       </div>
+    </div>
 
-      <div class="cert-full">
-      <img src="zap ai.png" alt="Increasing productivity with AI">
-      <div class="cert-info">
-        Zapier AI expert <br>
-        Issued January 2026
-      </div>
-
-        <div class="cert-full">
-      <img src="zapier troubleshooting.png" alt="Troubleshooting Zaps">
-      <div class="cert-info">
-        Zapier troubleshooter<br>
-        Issued January 2026
-      </div>
-    </div>
-    </div>
-    </div>
+    <!-- Add more here later if you get additional certificates -->
   </div>
 
 </body>
