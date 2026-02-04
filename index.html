@@ -3,164 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raniag Ubas | Virtual Assistant & Tech Professional</title>
+  <title>Raniag Ubas | Virtual Assistant & Operations Specialist</title>
+
   <style>
     :root {
-      --bg: #f8fafc;
       --text: #0f172a;
-      --accent: #64748b;
+      --accent: #475569;
       --gray: #64748b;
       --card-bg: rgba(255, 255, 255, 0.92);
-      --card-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
       --card-border: #e2e8f0;
       --hover-scale: scale(1.02);
-      --overlay-bg: rgba(248, 250, 252, 0.85);
     }
+
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0f172a;
-        --text: #e2e8f0;
+        --text: #e5e7eb;
         --accent: #94a3b8;
-        --gray: #94a3b8;
-        --card-bg: rgba(30, 41, 59, 0.92);
-        --card-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        --gray: #9ca3af;
+        --card-bg: rgba(30, 41, 59, 0.94);
+        --card-shadow: 0 10px 30px rgba(0,0,0,0.6);
         --card-border: #334155;
-        --overlay-bg: rgba(15, 23, 42, 0.85);
       }
     }
+
     * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      background: var(--overlay-bg) url('bg-pattern.png') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
       color: var(--text);
       line-height: 1.6;
-      max-width: 800px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 48px 20px;
       min-height: 100vh;
-      transition: background 0.3s ease;
     }
-    header { text-align:center; margin-bottom:60px; }
-    h1 { font-size:2.5rem; margin-bottom:8px; color:var(--text); }
-    .tagline { font-size:1.2rem; color:var(--gray); margin-bottom:20px; }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(135deg, #020617, #0f172a);
+      }
+    }
+
+    header { text-align:center; margin-bottom:64px; }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
     section {
-      background:var(--card-bg);
-      padding:2rem;
-      margin-bottom:2.5rem;
-      border-radius:12px;
-      box-shadow:var(--card-shadow);
-      border:1px solid var(--card-border);
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-      backdrop-filter:blur(4px);
+      background: var(--card-bg);
+      padding: 2.2rem;
+      margin-bottom: 2.8rem;
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--card-border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    section:hover { transform:var(--hover-scale); box-shadow:0 10px 30px rgba(0,0,0,0.12); }
+
+    section:hover {
+      transform: var(--hover-scale);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+    }
+
     h2 {
-      font-size:1.6rem;
-      margin-bottom:20px;
-      border-bottom:2px solid var(--accent);
-      padding-bottom:8px;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      color:var(--text);
+      font-size: 1.6rem;
+      margin-bottom: 22px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
-    .section-icon { font-size:1.4rem; opacity:0.8; }
-    ul { list-style:none; }
-    li { margin-bottom:12px; font-size:1.1rem; }
-    .skills li::before { content:"• "; color:var(--accent); font-weight:bold; }
-    .experience li { margin-bottom:20px; }
-    .role { font-weight:600; }
-    .company { color:var(--gray); font-size:0.95rem; }
-    .cert-button, .sample-link {
-      display:inline-block;
-      margin-top:1rem;
-      padding:0.7rem 1.3rem;
-      background:var(--accent);
-      color:#fff;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:500;
-      transition:background 0.2s ease;
+
+    ul { list-style: none; }
+    li { margin-bottom: 14px; font-size: 1.05rem; }
+
+    .skills li::before {
+      content: "• ";
+      color: var(--accent);
+      font-weight: bold;
     }
-    .cert-button:hover, .sample-link:hover { background:#475569; }
-    .portfolio-item { margin:1.5rem 0; }
-    .portfolio-item img { max-width:100%; border-radius:8px; border:1px solid var(--card-border); }
-    .contact { text-align:center; margin-top:60px; }
-    a { color:var(--accent); text-decoration:none; transition:color 0.2s ease; }
-    a:hover { color:#475569; text-decoration:underline; }
-    footer { text-align:center; margin-top:80px; color:var(--gray); font-size:0.9rem; }
-    @media (max-width:600px) {
-      h1 { font-size:2rem; }
-      body { padding:30px 15px; }
-      section { padding:1.5rem; }
+
+    .role { font-weight: 600; }
+    .company { color: var(--gray); font-size: 0.95rem; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 0.7rem 1.4rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 90px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2.1rem; }
+      section { padding: 1.6rem; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Raniag Ubas</h1>
-    <p class="tagline">Computer Science Graduate | Virtual Assistant | Tech-Savvy Admin & Process Specialist</p>
-  </header>
 
-  <section id="about">
-    <h2><span class="section-icon">👤</span> About Me</h2>
-    <p>Detail-oriented professional with a Computer Science degree (2019) and 4+ years in BPO/customer service (US healthcare accounts: claims, benefits, authorizations, scheduling). Experienced in data accuracy, process optimization, and remote coordination. Currently ICT Focal at DENR Lagangilang CENRO. Skilled with tools like GHL, Zapier, QuickBooks, Xero. Always focused on keeping things organized and efficient—happy to share examples like my task trackers and dashboards.</p>
-  </section>
+<header>
+  <h1>Raniag Ubas</h1>
+  <p class="tagline">
+    Virtual Assistant • Operations & Customer Support Specialist • CRM, Automation, Bookkeeping & Process Optimization
+  </p>
+</header>
 
-  <section id="portfolio">
-    <h2><span class="section-icon">📊</span> Portfolio / Organizational Examples</h2>
-    <p>Here's a custom Google Sheets task tracker I built and used daily in my BPO roles to manage claims follow-ups, authorization scheduling, and team tasks. It includes priority levels, status tracking, due dates, progress formulas, and a simple dashboard tab—helped me handle 40–60 items per day without missing deadlines.</p>
-    
-    <div class="portfolio-item">
-      <p><strong>Live Tracker:</strong> <a href="https://docs.google.com/spreadsheets/d/1KqqNlf3LHUvGZ7sVSAPplOLhzwquTTIL106Oi5ISAKI/edit?usp=sharing" target="_blank" class="sample-link">View Task Tracker (Google Sheets)</a></p>
-      <p><em>(View-only link – made with sample data for privacy)</em></p>
-    </div>
+<section id="about">
+  <h2>👤 About Me</h2>
+  <p>
+    Detail-oriented professional with a Computer Science degree (2019) and 4+ years of experience in customer service,
+    operations support, and data-driven environments. Background includes healthcare customer support, quality analysis,
+    and remote administrative roles with strong focus on accuracy, compliance, and process improvement.
+  </p>
+  <p>
+    Currently serving as ICT Focal at DENR Lagangilang CENRO while also working as a Freelance Virtual Assistant for
+    e-commerce and service-based clients. Experienced in CRM management, helpdesk support, appointment and booking
+    systems, workflow automation, inventory coordination, and light bookkeeping using QuickBooks and Xero.
+  </p>
+</section>
 
-    <div class="portfolio-item">
-      <p><strong>Screenshot:</strong></p>
-      <p>Dashboard tab with charts & summary stats → <a href="https://drive.google.com/file/d/1aCfMXr7ptx71mkPp3cajkobH8GlQhnio/view?usp=sharing" target="_blank">View Screenshot</a></p>
-    </div>
+<section id="skills">
+  <h2>🛠️ Core Skills & Tools</h2>
+  <ul class="skills">
+    <li>Customer Support (Email, Chat, Phone) • Level 1 Zendesk Ticket Handling</li>
+    <li>CRM & Automation: GoHighLevel (GHL), Zapier, workflow integrations</li>
+    <li>Bookkeeping: QuickBooks, Xero (invoicing, reconciliations, expense tracking)</li>
+    <li>Microsoft 365 (Outlook, Teams, Excel) & Google Workspace</li>
+    <li>Inventory tracking, data accuracy, reporting & process documentation</li>
+    <li>Advanced Google Sheets / Excel dashboards & task trackers</li>
+    <li>Strong written English, organization, proactive problem-solving</li>
+    <li>100% compliance record • AHT Champion (2019–2020, 3-minute average)</li>
+  </ul>
+</section>
 
-    <section id="skills">
-    <h2><span class="section-icon">🛠️</span> Key Skills & Tools</h2>
-    <ul class="skills">
-      <li>GoHighLevel (GHL) – Expert (CRM, automations, email sequences, client management)</li>
-      <li>Zapier – Workflow automation & integrations</li>
-      <li>QuickBooks & Xero – Bookkeeping, invoicing, reconciliations</li>
-      <li>Microsoft 365 (Outlook, Teams, OneNote)</li>
-      <li>Google Sheets / Excel – Advanced tracking, dashboards, data validation</li>
-      <li>Research, lead building, calendar/email management</li>
-      <li>Strong English communication, organization, proactive problem-solving</li>
-      <li>100% compliance record, AHT Champion (2019-2020, 3-min average)</li>
-    </ul>
-  </section>
+<section id="portfolio">
+  <h2>📊 Work Samples & Systems Experience</h2>
 
-  <section id="certifications">
-    <h2><span class="section-icon">🏆</span> Certifications</h2>
-    <p>View my full certifications including Gorgias, Xero, and QuickBooks.</p>
-    <a href="certificates.html" class="cert-button">View Full Certificates</a>
-  </section>
+  <p>
+    Built and used custom task trackers and dashboards to manage 40–60 daily items including follow-ups,
+    scheduling, inventory-related tasks, and customer escalations without missed deadlines.
+  </p>
 
-  <section id="experience">
-    <h2><span class="section-icon">💼</span> Experience</h2>
-    <ul class="experience">
-      <li><span class="role">ICT Focal</span> – DENR Lagangilang CENRO <br><span class="company">Tech coordination, admin tasks, independent support</span></li>
-      <li><span class="role">Data Analyst (2 years)</span> – BPO/Healthcare<br><span class="company">Workflows, metrics tracking, data accuracy, error resolution</span></li>
-      <li><span class="role">Customer Service Representative</span> – Alorica & Sagility (Aetna, Anthem, BCBS)<br><span class="company">Claims / Benefits / Eligibility / Authorizations, 100% compliance, AHT Champion</span></li>
-      <li><span class="role">Registration Kit Operator</span> – Philippine Statistics Authority</li>
-    </ul>
-  </section>
+  <p>
+    <strong>Google Sheets Task Tracker:</strong>
+    <a href="https://docs.google.com/spreadsheets/d/1KqqNlf3LHUvGZ7sVSAPplOLhzwquTTIL106Oi5ISAKI/edit?usp=sharing" target="_blank">
+      View Live Sample
+    </a>
+  </p>
 
-  <section id="contact">
-    <h2><span class="section-icon">📞</span> Contact</h2>
-    <p>Email: Raniagxd@gmail.com<br>Phone: 09764210791<br>Location: Abra, Philippines<br>Available: Flexible (US ET night shifts ok)</p>
-    <p><a href="https://bit.ly/49yk6tT">Resume (PDF)</a></p>
-  </section>
+  <ul>
+    <li>Zendesk: ticket views, tagging, macros, SLA tracking, escalation workflows</li>
+    <li>Zapier: automated CRM → Sheets → Email processes</li>
+    <li>QuickBooks & Xero: invoicing, transaction review, reconciliations</li>
+  </ul>
+</section>
 
-  <footer>
-    © 2026 Raniag Ubas. Built for remote opportunities.
-  </footer>
+<section id="experience">
+  <h2>💼 Experience</h2>
+  <ul>
+    <li>
+      <span class="role">ICT Focal</span> – DENR Lagangilang CENRO<br>
+      <span class="company">Systems coordination, reporting, technical & administrative support</span>
+    </li>
+
+    <li>
+      <span class="role">Freelance Virtual Assistant</span> – Remote<br>
+      <span class="company">
+        Supported e-commerce and service-based clients with customer support, Zendesk ticket handling,
+        CRM organization, appointment/booking setup, automation workflows, and light bookkeeping.
+      </span>
+    </li>
+
+    <li>
+      <span class="role">Data Analyst / Quality Analyst</span> – BPO (2 years)<br>
+      <span class="company">
+        Metrics tracking, process audits, reduced operational errors by ~15% through trend analysis.
+      </span>
+    </li>
+
+    <li>
+      <span class="role">Customer Service Representative</span> – Alorica & Sagility<br>
+      <span class="company">
+        Claims, benefits, eligibility, authorizations • High-volume support • 100% compliance
+      </span>
+    </li>
+
+    <li>
+      <span class="role">Registration Kit Operator</span> – Philippine Statistics Authority
+    </li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>📞 Contact</h2>
+  <p>
+    Email: raniagxdd@gmail.com<br>
+    Phone: 09764210791<br>
+    Location: Abra, Philippines<br>
+    Availability: Flexible (Night shifts supported)
+  </p>
+  <a class="button" href="https://bit.ly/49yk6tT" target="_blank">Download Resume (PDF)</a>
+</section>
+
+<footer>
+  © 2026 Raniag Ubas • Built for remote operations, support & VA roles
+</footer>
+
 </body>
 </html>
-
