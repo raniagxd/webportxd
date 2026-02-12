@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raniag Ubas | Virtual Assistant & Operations Specialist</title>
+  <title>Raniag Ubas | Customer Support & Operations Specialist</title>
 
   <style>
     :root {
@@ -13,21 +13,7 @@
       --card-bg: rgba(255, 255, 255, 0.92);
       --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
       --card-border: #e2e8f0;
-      --hover-scale: scale(1.02);
     }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text: #e5e7eb;
-        --accent: #94a3b8;
-        --gray: #9ca3af;
-        --card-bg: rgba(30, 41, 59, 0.94);
-        --card-shadow: 0 10px 30px rgba(0,0,0,0.6);
-        --card-border: #334155;
-      }
-    }
-
-    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
       font-family: system-ui, -apple-system, sans-serif;
@@ -37,109 +23,47 @@
       max-width: 860px;
       margin: 0 auto;
       padding: 48px 20px;
-      min-height: 100vh;
     }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(135deg, #020617, #0f172a);
-      }
-    }
+    header { text-align:center; margin-bottom:50px; }
 
-    header { text-align:center; margin-bottom:64px; }
-
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 10px;
-      letter-spacing: -0.02em;
-    }
+    h1 { font-size: 2.4rem; margin-bottom: 6px; }
 
     .tagline {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       color: var(--gray);
-      max-width: 640px;
-      margin: 0 auto;
     }
 
     section {
       background: var(--card-bg);
-      padding: 2.2rem;
-      margin-bottom: 2.8rem;
+      padding: 2rem;
+      margin-bottom: 1.8rem;
       border-radius: 14px;
       box-shadow: var(--card-shadow);
       border: 1px solid var(--card-border);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    section:hover {
-      transform: var(--hover-scale);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.12);
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 22px;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      color: var(--accent);
     }
 
     ul { list-style: none; }
-    li { margin-bottom: 14px; font-size: 1.05rem; }
-
-    .skills li::before {
-      content: "• ";
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    .role { font-weight: 600; }
-    .company { color: var(--gray); font-size: 0.95rem; }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 0.7rem 1.4rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 10px;
-      font-weight: 500;
-    }
-
-    .screenshots {
-      margin-top: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    li { margin-bottom: 8px; }
 
     .screenshots img {
       width: 100%;
+      margin-top: 10px;
       border-radius: 10px;
       border: 1px solid var(--card-border);
     }
 
     footer {
-      text-align: center;
-      margin-top: 90px;
-      color: var(--gray);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 640px) {
-      h1 { font-size: 2.1rem; }
-      section { padding: 1.6rem; }
+      text-align:center;
+      margin-top:40px;
+      color:var(--gray);
+      font-size:0.85rem;
     }
   </style>
 </head>
@@ -149,112 +73,110 @@
 <header>
   <h1>Raniag Ubas</h1>
   <p class="tagline">
-    Virtual Assistant • Operations & Customer Support Specialist • CRM, Automation, Bookkeeping & Process Optimization
+    Customer Support • CRM & Helpdesk Systems • Shopify & Automation • Bookkeeping Support
   </p>
 </header>
 
-<section id="about">
-  <h2>👤 About Me</h2>
+<section>
+  <h2>Professional Profile</h2>
   <p>
-    Detail-oriented professional with a Computer Science degree (2019) and 4+ years of experience in customer service,
-    operations support, and data-driven environments. Background includes healthcare customer support, quality analysis,
-    and remote administrative roles with strong focus on accuracy, compliance, and process improvement.
+    Customer support and operations specialist with 4+ years of experience across healthcare,
+    government, and remote business environments. Proven ability to manage high-volume workflows,
+    maintain data accuracy, and support CRM, helpdesk, and automation systems.
   </p>
   <p>
-    Currently serving as ICT Focal at DENR Lagangilang CENRO while also working as a Freelance Virtual Assistant for
-    e-commerce and service-based clients. Experienced in CRM management, helpdesk support, appointment and booking
-    systems, workflow automation, inventory coordination, and light bookkeeping using QuickBooks and Xero.
+    Experience includes Zendesk ticket handling, Shopify support, Zapier automation workflows,
+    and bookkeeping assistance using QuickBooks and Xero. Recognized for maintaining compliance,
+    documentation accuracy, and consistent turnaround of operational tasks.
   </p>
 </section>
 
-<section id="skills">
-  <h2>🛠️ Core Skills & Tools</h2>
-  <ul class="skills">
-    <li>Customer Support (Email, Chat, Phone) • Level 1 Zendesk Ticket Handling</li>
-    <li>CRM & Automation: GoHighLevel (GHL), Zapier, workflow integrations</li>
-    <li>Bookkeeping: QuickBooks, Xero (invoicing, reconciliations, expense tracking)</li>
-    <li>Microsoft 365 (Outlook, Teams, Excel) & Google Workspace</li>
-    <li>Inventory tracking, data accuracy, reporting & process documentation</li>
-    <li>Advanced Google Sheets / Excel dashboards & task trackers</li>
-    <li>Strong written English, organization, proactive problem-solving</li>
-    <li>100% compliance record • AHT Champion (2019–2020, 3-minute average)</li>
-  </ul>
-</section>
-
-<section id="portfolio">
-  <h2>📊 Work Samples & Systems Experience</h2>
-
-  <p>
-    Built and used custom task trackers and dashboards to manage 40–60 daily items including follow-ups,
-    scheduling, inventory-related tasks, and customer escalations without missed deadlines.
-  </p>
-
-  <p>
-    <strong>Google Sheets Task Tracker:</strong>
-    <a href="https://docs.google.com/spreadsheets/d/1KqqNlf3LHUvGZ7sVSAPplOLhzwquTTIL106Oi5ISAKI/edit?usp=sharing" target="_blank">
-      View Live Sample
-    </a>
-  </p>
-
+<section>
+  <h2>Core Competencies</h2>
   <ul>
-    <li>Zendesk: ticket views, tagging, macros, SLA tracking, escalation workflows</li>
-    <li>Zapier: automated CRM → Sheets → Email processes</li>
-    <li>QuickBooks & Xero: invoicing, transaction review, reconciliations</li>
+    <li>Customer Support (Email, Chat, Phone)</li>
+    <li>Zendesk & Helpdesk Ticket Management</li>
+    <li>CRM & Workflow Automation (Zapier, GoHighLevel)</li>
+    <li>Shopify Store & Order Support</li>
+    <li>Bookkeeping Support (QuickBooks, Xero, MYOB)</li>
+    <li>Google Sheets / Excel Tracking & Dashboards</li>
+    <li>Process Documentation & Task Coordination</li>
   </ul>
+</section>
 
-  <h3 style="margin-top:18px; font-size:1.1rem; color:var(--accent);">
-    Tools & Platform Snapshots
-  </h3>
+<section>
+  <h2>Systems & Platform Experience</h2>
+  <ul>
+    <li>Zendesk – ticket workflows, tagging, macros, SLA monitoring</li>
+    <li>Zapier – CRM, automation, and task routing workflows</li>
+    <li>Shopify – order management & backend updates</li>
+    <li>QuickBooks / Xero / MYOB – invoicing & transaction tracking</li>
+    <li>GoHighLevel / Notion / Slack – operations & collaboration</li>
+  </ul>
+</section>
 
+<section>
+  <h2>Work Samples & Snapshots</h2>
+  <p><strong>Zendesk Environment</strong></p>
+  <p>Example of ticket handling, categorization, and workflow management.</p>
   <div class="screenshots">
-    <img src="images/zendesk.png" alt="Zendesk Sample Screenshot">
-    <img src="images/zendesk1.png" alt="Zendesk Sample Screenshot">
-    <img src="images/zendesk2.png" alt="Zendesk Sample Screenshot">
-    <img src="images/zapier.png" alt="Zapier Automation Screenshot">
-    <img src="images/zapier1.png" alt="Zapier Automation Screenshot">
-    <img src="images/zapier2.png" alt="Zapier Automation Screenshot">
+    <img src="zendesk.png" alt="Zendesk Screenshot">
+    <img src="zendesk1.png" alt="Zendesk Screenshot">
+    <img src="zendesk2.png" alt="Zendesk Screenshot">
+  </div>
+
+  <p><strong>Zapier Automation</strong></p>
+  <p>Sample automation used for task routing and system integration.</p>
+  <div class="screenshots">
+    <img src="zapier.png" alt="Zapier Screenshots">
+    <img src="zapier1.png" alt="Zapier Screenshots">
+    <img src="zapier2.png" alt="Zapier Screenshots">
   </div>
 </section>
 
-<section id="experience">
-  <h2>💼 Experience</h2>
+<section>
+  <h2>Certifications & Training</h2>
   <ul>
-    <li>
-      <span class="role">ICT Focal</span> – DENR Lagangilang CENRO<br>
-      <span class="company">Systems coordination, reporting, technical & administrative support</span>
-    </li>
+    <li>Customer Service & Client Communication</li>
+    <li>Quality Assurance & Process Compliance</li>
+    <li>Healthcare Account & HIPAA Awareness</li>
+    <li>CRM & Helpdesk Systems Training</li>
+  </ul>
 
-    <li>
-      <span class="role">Freelance Virtual Assistant</span> – Remote<br>
-      <span class="company">
-        Supported e-commerce and service-based clients with customer support, Zendesk ticket handling,
-        CRM organization, appointment/booking setup, automation workflows, and light bookkeeping.
-      </span>
-    </li>
+  <div class="screenshots">
+    <img src="certificate1.jpg" alt="Certificate">
+    <img src="certificate2.jpg" alt="Certificate">
+  </div>
+</section>
 
-    <li>
-      <span class="role">Data Analyst / Quality Analyst</span> – BPO (2 years)<br>
-      <span class="company">
-        Metrics tracking, process audits, reduced operational errors by ~15% through trend analysis.
-      </span>
-    </li>
+<section>
+  <h2>Professional Experience</h2>
+  <ul>
+    <li><strong>ICT Focal – DENR (2025–Present)</strong><br>
+    Systems coordination, reporting, technical & administrative support</li>
 
-    <li>
-      <span class="role">Customer Service Representative</span> – Alorica & Sagility<br>
-      <span class="company">
-        Claims, benefits, eligibility, authorizations • High-volume support • 100% compliance
-      </span>
-    </li>
+    <li><strong>Freelance Virtual Assistant</strong><br>
+    CRM management, Zendesk support, automation workflows, bookkeeping assistance</li>
 
-    <li>
-      <span class="role">Registration Kit Operator</span> – Philippine Statistics Authority
-    </li>
+    <li><strong>Quality Analyst / CSR – Healthcare Accounts</strong><br>
+    Documentation audits, compliance monitoring, customer support</li>
+
+    <li><strong>Registration Kit Operator – PSA</strong><br>
+    Identity verification & records handling</li>
   </ul>
 </section>
 
-<section id="contact">
-  <h2>📞 Contact</h2>
+<section>
+  <h2>Contact</h2>
   <p>
     Email: raniagxdd@gmail.com<br>
-    Phone:
+    Abra, Philippines • Available for Remote Work
+  </p>
+</section>
 
+<footer>
+  © 2026 Raniag Ubas • Professional Portfolio
+</footer>
+
+</body>
+</html>
