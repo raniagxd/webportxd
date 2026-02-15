@@ -1,71 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raniag Ubas | Customer Support & Operations Specialist</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Raniag Ubas | Customer Support & Operations Specialist</title>
 
-  <style>
-    :root {
-      --text: #0f172a;
-      --accent: #475569;
-      --gray: #64748b;
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      --card-border: #e2e8f0;
-    }
+<style>
+:root {
+  --text: #0f172a;
+  --accent: #334155;
+  --gray: #64748b;
+  --border: #e2e8f0;
+}
 
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-      color: var(--text);
-      line-height: 1.6;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 48px 20px;
-    }
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
 
-    header { text-align:center; margin-bottom:50px; }
+header { text-align:center; margin-bottom: 50px; }
 
-    h1 { font-size: 2.4rem; margin-bottom: 6px; }
+h1 { font-size: 2.4rem; margin-bottom: 6px; }
 
-    .tagline {
-      font-size: 1.05rem;
-      color: var(--gray);
-    }
+.tagline {
+  font-size: 1.05rem;
+  color: var(--gray);
+}
 
-    section {
-      background: var(--card-bg);
-      padding: 2rem;
-      margin-bottom: 1.8rem;
-      border-radius: 14px;
-      box-shadow: var(--card-shadow);
-      border: 1px solid var(--card-border);
-    }
+section {
+  background: rgba(255,255,255,0.96);
+  padding: 2rem;
+  margin-bottom: 1.6rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
 
-    h2 {
-      font-size: 1.3rem;
-      margin-bottom: 14px;
-      color: var(--accent);
-    }
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
 
-    ul { list-style: none; }
-    li { margin-bottom: 8px; }
+ul { list-style: none; }
+li { margin-bottom: 6px; }
 
-    .screenshots img {
-      width: 100%;
-      margin-top: 10px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-    }
+/* BUTTONS */
 
-    footer {
-      text-align:center;
-      margin-top:40px;
-      color:var(--gray);
-      font-size:0.85rem;
-    }
-  </style>
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 0.55rem 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  opacity: 0.95;
+}
+
+/* BADGES */
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.badges img {
+  height: 28px;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.badges img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.modal img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.close {
+  float: right;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--gray);
+}
+</style>
 </head>
 
 <body>
@@ -81,91 +142,77 @@
   <h2>Professional Profile</h2>
   <p>
     Customer support and operations specialist with 4+ years of experience across healthcare,
-    government, and remote business environments. Proven ability to manage high-volume workflows,
-    maintain data accuracy, and support CRM, helpdesk, and automation systems.
+    government, and remote business environments. Recognized for maintaining documentation accuracy,
+    resolving customer concerns efficiently, and supporting CRM and workflow systems in high-volume settings.
   </p>
   <p>
-    Experience includes Zendesk ticket handling, Shopify support, Zapier automation workflows,
-    and bookkeeping assistance using QuickBooks and Xero. Recognized for maintaining compliance,
-    documentation accuracy, and consistent turnaround of operational tasks.
+    Hands-on experience supporting Zendesk environments, Shopify operations, Zapier automations,
+    and bookkeeping workflows using QuickBooks and Xero.
   </p>
 </section>
 
 <section>
   <h2>Core Competencies</h2>
   <ul>
-    <li>Customer Support (Email, Chat, Phone)</li>
-    <li>Zendesk & Helpdesk Ticket Management</li>
-    <li>CRM & Workflow Automation (Zapier, GoHighLevel)</li>
-    <li>Shopify Store & Order Support</li>
-    <li>Bookkeeping Support (QuickBooks, Xero, MYOB)</li>
-    <li>Google Sheets / Excel Tracking & Dashboards</li>
-    <li>Process Documentation & Task Coordination</li>
+    <li>Delivered multi-channel customer support (email, chat, phone) with focus on resolution & clarity</li>
+    <li>Managed Zendesk ticket workflows, tagging structures, macros, and SLA tracking</li>
+    <li>Built and maintained Zapier automations to reduce manual operational tasks</li>
+    <li>Supported Shopify backend operations including orders, updates, and issue resolution</li>
+    <li>Assisted bookkeeping processes: invoicing, transaction review, reconciliations</li>
+    <li>Maintained structured trackers, dashboards, and process documentation</li>
   </ul>
 </section>
 
 <section>
-  <h2>Systems & Platform Experience</h2>
-  <ul>
-    <li>Zendesk – ticket workflows, tagging, macros, SLA monitoring</li>
-    <li>Zapier – CRM, automation, and task routing workflows</li>
-    <li>Shopify – order management & backend updates</li>
-    <li>QuickBooks / Xero / MYOB – invoicing & transaction tracking</li>
-    <li>GoHighLevel / Notion / Slack – operations & collaboration</li>
+  <h2>Platforms & Systems</h2>
+
+  <div class="badges">
+    <img src="zendesk-badge.png" alt="Zendesk">
+    <img src="zapier-badge.png" alt="Zapier">
+    <img src="shopify-badge.png" alt="Shopify">
+    <img src="quickbooks-badge.png" alt="QuickBooks">
+    <img src="xero-badge.png" alt="Xero">
+  </div>
+
+  <ul style="margin-top:12px;">
+    <li>Zendesk – Resolved, categorized, and escalated customer tickets using structured workflows</li>
+    <li>Zapier – Designed automations connecting CRM, task tracking, and notification systems</li>
+    <li>Shopify – Supported order management, backend updates, and store maintenance tasks</li>
+    <li>QuickBooks / Xero / MYOB – Assisted invoicing, transaction tracking, reconciliations</li>
+    <li>GoHighLevel / Notion / Slack – Supported internal coordination & operational tracking</li>
   </ul>
 </section>
 
 <section>
-  <h2>Work Samples & Snapshots</h2>
-  <p><strong>Zendesk Environment</strong></p>
-  <p>Example of ticket handling, categorization, and workflow management.</p>
-  <div class="screenshots">
-    <img src="zendesk.png" alt="Zendesk Screenshot">
-    <img src="zendesk1.png" alt="Zendesk Screenshot">
-    <img src="zendesk2.png" alt="Zendesk Screenshot">
-  </div>
+  <h2>Work Samples & Proof of Tools</h2>
 
-  <p><strong>Zapier Automation</strong></p>
-  <p>Sample automation used for task routing and system integration.</p>
-  <div class="screenshots">
-    <img src="zapier.png" alt="Zapier Screenshots">
-    <img src="zapier1.png" alt="Zapier Screenshots">
-    <img src="zapier2.png" alt="Zapier Screenshots">
-  </div>
-</section>
+  <button class="button" onclick="openModal('zendeskModal')">
+    Zendesk Workflows
+  </button>
 
-<section>
-  <h2>Certifications & Training</h2>
-  <ul>
-    <li>Customer Service & Client Communication</li>
-    <li>Quality Assurance & Process Compliance</li>
-    <li>Healthcare Account & HIPAA Awareness</li>
-    <li>CRM & Helpdesk Systems Training</li>
-  </ul>
+  <button class="button" onclick="openModal('zapierModal')">
+    Zapier Automations
+  </button>
 
-  <div class="screenshots">
-    <img src="quickbooks-cert.png" alt="Quickbooks Certificate">
-    <img src="gorgias-cert.png" alt="Gorgias Certificate">
-    <img src="xero-cert.png" alt="Xero Certificate">
-    <img src="zapier-productivity-cert.png" alt="Zapier Productivity Certificate">
-    <img src="zapier-troubleshooting-cert.png" alt="Zapier Troubleshooting Certificate">
-  </div>
+  <button class="button" onclick="openModal('certModal')">
+    Certifications
+  </button>
 </section>
 
 <section>
   <h2>Professional Experience</h2>
   <ul>
     <li><strong>ICT Focal – DENR (2025–Present)</strong><br>
-    Systems coordination, reporting, technical & administrative support</li>
+    Coordinated systems, maintained reports, and supported technical & administrative workflows</li>
 
     <li><strong>Freelance Virtual Assistant</strong><br>
-    CRM management, Zendesk support, automation workflows, bookkeeping assistance</li>
+    Supported CRM organization, Zendesk operations, Shopify tasks, automations, bookkeeping assistance</li>
 
     <li><strong>Quality Analyst / CSR – Healthcare Accounts</strong><br>
-    Documentation audits, compliance monitoring, customer support</li>
+    Performed documentation audits, monitored compliance, and resolved customer account concerns</li>
 
     <li><strong>Registration Kit Operator – PSA</strong><br>
-    Identity verification & records handling</li>
+    Handled identity verification and sensitive records processing</li>
   </ul>
 </section>
 
@@ -177,10 +224,49 @@
   </p>
 </section>
 
-<footer>
+<footer style="text-align:center; color:var(--gray); font-size:0.85rem;">
   © 2026 Raniag Ubas • Professional Portfolio
 </footer>
 
+<!-- MODALS -->
+
+<div id="zendeskModal" class="modal" onclick="closeModal(this)">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="zendesk.png">
+    <img src="zendesk1.png">
+    <img src="zendesk2.png">
+  </div>
+</div>
+
+<div id="zapierModal" class="modal" onclick="closeModal(this)">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="zapier.png">
+    <img src="zapier1.png">
+    <img src="zapier2.png">
+  </div>
+</div>
+
+<div id="certModal" class="modal" onclick="closeModal(this)">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="quickbooks-cert.png">
+    <img src="gorgias-cert.png">
+    <img src="xero-cert.png">
+    <img src="zapier-productivity-cert.png">
+    <img src="zapier-troubleshooting-cert.png">
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+function closeModal(el) {
+  el.style.display = "none";
+}
+</script>
+
 </body>
 </html>
-
